@@ -37,7 +37,7 @@ public class ArrayList {
 		a = temp;
 	}
 
-	// Get the element at the specific indx of the list
+	// Get the element at the specific index of the list
 	public Object get(int index) {
 		if (index <= -1 || index >= size()) {
 			throw new IndexOutOfBoundsException();
