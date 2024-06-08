@@ -47,6 +47,12 @@ public class ArrayList {
 	public int size() {
 		return count;
 	}
+	
+	public int get(Integer index) {
+		if(index < 0 && index >= count)
+			throw new ArrayIndexOutOfBoundsException();
+		return array[index];
+	}
 
 	public static void main(String[] args) {
 		ArrayList arrayList = new ArrayList();
@@ -55,13 +61,18 @@ public class ArrayList {
 		arrayList.add(30);
 		arrayList.add(40);
 		arrayList.add(50);
+		arrayList.display();
+		arrayList.add(0, 5);
 		System.out.println(arrayList.size());
 		arrayList.display();
-//		arrayList.add(0, 5);
-//		System.out.println(arrayList.size());
-//		arrayList.display();
-		arrayList.remove(1);
+		
+		arrayList.remove(5);
 		System.out.println(arrayList.size());
 		arrayList.display();
+		
+		
+		
+		
+		System.out.println(arrayList.get(0));
 	}
 }
