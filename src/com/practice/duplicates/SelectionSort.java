@@ -1,4 +1,4 @@
-package com.sorting.selectionsort;
+package com.practice.duplicates;
 
 public class SelectionSort {
 
@@ -10,16 +10,15 @@ public class SelectionSort {
 
 	}
 
-	public static void selectionSort(int[] a) {
-		for (int i = 0; i < a.length - 1; i++) {
+	static void selectionSort(int[] a) {
+		for (int i = 0; i < a.length; i++) {
 			int index = i;
 			for (int j = i + 1; j < a.length; j++)
 				if (a[index] > a[j])
 					index = j;
-			int temp = a[i];
-			a[i] = a[index];
-			a[index] = temp;
+			int temp = a[index];
+			a[index] = a[i];
+			a[i] = temp;
 		}
 	}
-
 }

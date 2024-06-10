@@ -1,4 +1,4 @@
-package com.collections.quicksort;
+package com.algorithms.sorting;
 
 public class QuickSort {
 
