@@ -3,3 +3,4 @@ bin/com/practice/duplicates/
 
 # Ignore src/com/practice/duplicates folder
 src/com/practice/duplicates/
+/bin/

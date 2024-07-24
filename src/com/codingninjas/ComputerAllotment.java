@@ -1,7 +1,8 @@
 package com.codingninjas;
 
-import java.util.*;
-import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ComputerAllotment {
 	public static int countCustomers(ArrayList<Integer> arr, int k) {
