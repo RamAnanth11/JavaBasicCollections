@@ -10,21 +10,21 @@ class Node<T> {
 }
 
 public class SinglyLinkedList {
-	private Node first = null;
+	private Node<Object> first = null;
 	private int count = 0;
 
 	// Add an element to the end of the linked list
 	public void add(Object e) {
 		if (first == null) {
-			first = new Node(e);
+			first = new Node<Object>(e);
 			count++;
 			return;
 		}
-		Node curr = first;
+		Node<Object> curr = first;
 		while (curr.next != null) {
 			curr = curr.next;
 		}
-		curr.next = new Node(e);
+		curr.next = new Node<Object>(e);
 		count++;
 	}
 
@@ -41,11 +41,11 @@ public class SinglyLinkedList {
 			count++;
 			return;
 		}
-		Node curr = first;
+		Node<Object> curr = first;
 		for (int i = 1; i < index; i++) {
 			curr = curr.next;
 		}
-//		curr.next = new Node(e, curr.next);
+//		curr.next = new Node<Object>(e, curr.next);
 		Node<Object> n = new Node<Object>(e);
 		n.next = curr.next;
 		curr.next = n;
@@ -62,7 +62,7 @@ public class SinglyLinkedList {
 		if (index <= -1 || index >= size()) {
 			throw new IndexOutOfBoundsException();
 		}
-		Node curr = first;
+		Node<Object> curr = first;
 		for (int i = 1; i <= index; i++) {
 			curr = curr.next;
 		}
@@ -79,7 +79,7 @@ public class SinglyLinkedList {
 			count--;
 			return;
 		}
-		Node curr = first;
+		Node<Object> curr = first;
 		for (int i = 1; i < index; i++) {
 			curr = curr.next;
 		}
